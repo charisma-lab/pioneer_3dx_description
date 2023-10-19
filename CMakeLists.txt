@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(pioneer_description)
+project(pioneer_3dx_description)
 
 find_package(catkin REQUIRED)
 
