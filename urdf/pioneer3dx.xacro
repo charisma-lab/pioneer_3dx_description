@@ -5,9 +5,9 @@
 <robot name="pioneer3dx" xmlns:xacro="http://ros.org/wiki/xacro">
 
 
-  <xacro:include filename="$(find pioneer_description)/urdf/pioneer3dx_wheel.xacro"/>
-  <xacro:include filename="$(find pioneer_description)/urdf/materials.xacro" />
-  <xacro:include filename="$(find pioneer_description)/urdf/pioneer.gazebo" />
+  <xacro:include filename="$(find pioneer_3dx_description)/urdf/pioneer3dx_wheel.xacro"/>
+  <xacro:include filename="$(find pioneer_3dx_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find pioneer_3dx_description)/urdf/pioneer.gazebo" />
 
 <!-- Base link to interface with gmapping and move_base -->
 	<link name="base_link"/>
@@ -20,17 +20,17 @@
   </joint>
 
   <link name="chassis">
-    <visual name="chassis_visual">
+    <visual name="chassis_visual">ea
       <origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/chassis.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/chassis.stl"/>
 			</geometry>
 			<material name="ChassisRed"/>
     </visual>
     <collision>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/chassis.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/chassis.stl"/>
 				<!--box size="0.43 0.277 0.17"/-->
 			</geometry>
 		</collision>
@@ -61,14 +61,14 @@
 			</inertial>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="top_geom">
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/top.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/top.stl"/>
 			</geometry>
 			<material name="TopBlack"/>
 		</visual>
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/top.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/top.stl"/>
 				<!--box size="0.44 0.38 0.005"/-->
 			</geometry>
 		</collision>
@@ -95,14 +95,14 @@
 	  <visual name="base_visual">
 		  <origin xyz="0 0 0" rpy="0 0 0"/>
 		  <geometry name="pioneer_geom">
-			  <mesh filename="package://pioneer_description/meshes/p3dx_meshes/swivel.stl"/>
+			  <mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/swivel.stl"/>
 		  </geometry>
 		  <material name="swivel"/>
 	  </visual>
 	  <collision>
 		  <origin xyz="0 0 0" rpy="0 0 0"/>
 		  <geometry>
-			  <mesh filename="package://pioneer_description/meshes/p3dx_meshes/swivel.stl"/>
+			  <mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/swivel.stl"/>
 		  </geometry>
 	  </collision>
 	</link>
@@ -118,14 +118,14 @@
 	  <visual name="base_visual">
 		  <origin xyz="0 0 0" rpy="0 0 0"/>
 		  <geometry name="pioneer_geom">
-			  <mesh filename="package://pioneer_description/meshes/p3dx_meshes/center_hubcap.stl"/>
+			  <mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/center_hubcap.stl"/>
 		  </geometry>
 		  <material name="HubcapGrey"/>
 	  </visual>
 	  <collision>
 		  <origin xyz="0 0 0" rpy="0 0 0"/>
 		  <geometry>
-			  <mesh filename="package://pioneer_description/meshes/p3dx_meshes/center_hubcap.stl"/>
+			  <mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/center_hubcap.stl"/>
 		  </geometry>
 	  </collision>
 	</link>
@@ -150,14 +150,14 @@
 	  <visual name="base_visual">
 		  <origin xyz="0 0 0" rpy="0 0 0"/>
 		  <geometry name="pioneer_geom">
-			  <mesh filename="package://pioneer_description/meshes/p3dx_meshes/center_wheel.stl"/>
+			  <mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/center_wheel.stl"/>
 		  </geometry>
 		  <material name="WheelBlack"/>
 	  </visual>
 	  <collision>
 		  <origin xyz="0 0 0" rpy="0 0 0"/>
 		  <geometry>
-		    <mesh filename="package://pioneer_description/meshes/p3dx_meshes/center_wheel.stl"/>
+		    <mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/center_wheel.stl"/>
 			  <!--<cylinder radius="0.0375" length="0.03"/>-->
 		  </geometry>
 	  </collision>
@@ -190,14 +190,14 @@
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/left_wheel.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/left_wheel.stl"/>
 			</geometry>
 			<material name="WheelBlack"/>
 		</visual>
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-			  <mesh filename="package://pioneer_description/meshes/p3dx_meshes/left_wheel.stl"/>
+			  <mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/left_wheel.stl"/>
 				<!--<cylinder radius="0.092" length="0.04"/>-->
 			</geometry>
 		</collision>
@@ -213,14 +213,14 @@
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/left_hubcap.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/left_hubcap.stl"/>
 			</geometry>
 			<material name="HubcapYellow"/>
 		</visual>
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/left_hubcap.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/left_hubcap.stl"/>
 			</geometry>
 		</collision>
 	</link>
@@ -246,14 +246,14 @@
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/right_wheel.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/right_wheel.stl"/>
 			</geometry>
 			<material name="WheelBlack"/>
 		</visual>
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-			  <mesh filename="package://pioneer_description/meshes/p3dx_meshes/right_wheel.stl"/>
+			  <mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/right_wheel.stl"/>
 				<!--<cylinder radius="0.092" length="0.04"/>-->
 			</geometry>
 		</collision>
@@ -269,14 +269,14 @@
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/right_hubcap.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/right_hubcap.stl"/>
 			</geometry>
 			<material name="HubcapYellow"/>
 		</visual>
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/right_hubcap.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/right_hubcap.stl"/>
 			</geometry>
 		</collision>
 	</link>
@@ -292,14 +292,14 @@
 		<visual name="base_visual">
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/front_sonar.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/front_sonar.stl"/>
 			</geometry>
 			<material name="SonarYellow"/>
 		</visual>
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/front_sonar.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/front_sonar.stl"/>
 			</geometry>
 		</collision>
 	</link>
@@ -320,14 +320,14 @@
 		<visual name="back_sonar_vis">
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/back_sonar.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/back_sonar.stl"/>
 			</geometry>
 			<material name="SonarYellow"/>
 		</visual>
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://pioneer_description/meshes/p3dx_meshes/back_sonar.stl"/>
+				<mesh filename="file://$(find pioneer_3dx_description)/meshes/p3dx_meshes/back_sonar.stl"/>
 			</geometry>
 		</collision>
 	</link>
@@ -349,7 +349,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://pioneer_description/meshes/hokuyo.dae"/>
+        <mesh filename="file://$(find pioneer_3dx_description)/meshes/hokuyo.dae"/>
 	      <!--box size="0.05 0.05 0.071"/-->
       </geometry>
     </collision>
@@ -357,7 +357,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://pioneer_description/meshes/hokuyo.dae"/>
+        <mesh filename="file://$(find pioneer_3dx_description)/meshes/hokuyo.dae"/>
       </geometry>
     </visual>
 

@@ -24,7 +24,7 @@
     <visual name="base_visual">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry name="pioneer_geom">
-        <mesh filename="package://pioneer_description/meshes/p3dx_meshes/${suffix}_wheel.stl"/>
+        <mesh filename="($find pioneer_3dx_description)/meshes/p3dx_meshes/${suffix}_wheel.stl"/>
       </geometry>
       <material name="WheelBlack">
         <color rgba="0.117 0.117 0.117 1"/>
@@ -33,7 +33,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
       <geometry>
-        <!--<mesh filename="package://pioneer_description/meshes/p3dx_meshes/${suffix}_wheel.stl"/>-->
+        <!--<mesh filename="($find pioneer_3dx_description)/meshes/p3dx_meshes/${suffix}_wheel.stl"/>-->
         <cylinder radius="0.09" length="0.01"/>
       </geometry>
     </collision>
@@ -57,7 +57,7 @@
   <visual name="base_visual">
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry name="pioneer_geom">
-      <mesh filename="package://pioneer_description/meshes/p3dx_meshes/${suffix}_hubcap.stl"/>
+      <mesh filename="($find pioneer_3dx_description)/meshes/p3dx_meshes/${suffix}_hubcap.stl"/>
     </geometry>
     <material name="HubcapYellow">
       <color rgba="1.0 0.811 0.151 1.0"/>
